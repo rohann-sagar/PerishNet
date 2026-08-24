@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "PerishNet Demo"
+description = "A judge-ready PerishNet prototype that turns one visual scan and continuous environmental readings into explainable shelf-life forecasts, spoilage risk, and loss-prevention actions for perishable produce batches."
+version = "1.0.0"
+id = "artifacts/perishnet-demo"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24491
+
+[services.development]
+run = "pnpm --filter @workspace/perishnet-demo run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/perishnet-demo", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/perishnet-demo/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24491"
+BASE_PATH = "/"
