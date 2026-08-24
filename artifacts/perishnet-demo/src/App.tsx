@@ -7,7 +7,7 @@ import { Activity, ArrowUpRight, Bell, Box, Check, ChevronRight, CloudSun, Cpu, 
 import { Link, Route, Switch, Router as WouterRouter, useLocation } from 'wouter';
 
 const queryClient = new QueryClient();
-const logoPath = '/perishnet-reference.png';
+const logoPath = '/perishnet-wordmark.png';
 type View = 'dashboard' | 'batch' | 'simulator' | 'sensor' | 'system';
 type Storage = 'Current' | 'Controlled';
 const navItems: { id: View; label: string; icon: typeof Gauge; path: string }[] = [
@@ -31,7 +31,7 @@ function Shell({ children, view, onCreate }: { children: ReactNode; view: View; 
   const [mobileNav, setMobileNav] = useState(false);
   return <div className="cockpit">
      <aside className="sidebar-rail fixed inset-y-0 left-0 z-30 flex w-[238px] flex-col border-r border-[hsl(var(--sidebar-border))] bg-[hsl(var(--sidebar))] px-3 py-5 transition-all">
-       <div className="mb-9 flex items-center gap-3 px-3"><img src={logoPath} alt="PerishNet" className="h-12 w-[182px] object-cover object-left object-top" /></div>
+       <div className="logo-lockup mb-9 flex h-12 w-[182px] items-center gap-3 overflow-hidden px-0"><img src={logoPath} alt="PerishNet" className="h-12 w-[182px] shrink-0 object-contain object-left" /></div>
       <div className="nav-caption px-3 pb-2 text-[9px] font-semibold uppercase tracking-[.19em] text-[hsl(var(--muted-foreground))]">Operations</div>
       <nav className="space-y-1">{navItems.map((item) => { const Icon = item.icon; return <Link key={item.id} href={item.path} data-testid={`link-${item.id}`} className={`nav-item group flex items-center gap-3 rounded-lg px-3 py-3 text-[12px] font-semibold transition-colors ${view === item.id ? 'bg-[hsl(var(--sidebar-accent))] text-[hsl(var(--sidebar-accent-foreground))]' : 'text-[hsl(var(--muted-foreground))] hover:bg-[hsl(var(--sidebar-accent))] hover:text-[hsl(var(--foreground))]'}`}><Icon size={17} strokeWidth={1.7} /><span className="sidebar-label">{item.label}</span>{view === item.id && <span className="ml-auto sidebar-label h-1.5 w-1.5 rounded-full bg-[hsl(var(--primary))] shadow-[0_0_10px_hsl(var(--primary))]" />}</Link>; })}</nav>
       <div className="mt-8 nav-caption px-3 pb-2 text-[9px] font-semibold uppercase tracking-[.19em] text-[hsl(var(--muted-foreground))]">Create</div>

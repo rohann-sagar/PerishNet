@@ -118,6 +118,7 @@ input[type="range"]::-webkit-slider-thumb { margin-top: -5px; width: 14px; heigh
 .modal-backdrop { background: hsl(166 58% 3% / .74); backdrop-filter: blur(8px); }
 @media (max-width: 900px) {
   .sidebar-rail { width: 76px !important; }
+  .logo-lockup { width: 44px !important; }
   .sidebar-label, .logo-word, .nav-caption, .user-copy { display: none; }
   .nav-item { justify-content: center; }
   .main-shell { margin-left: 76px !important; }
