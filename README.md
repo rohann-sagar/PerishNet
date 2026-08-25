@@ -1,4 +1,5 @@
-# 🍃 PerishNet
+# <img width="500" height="80" alt="image" src="https://github.com/user-attachments/assets/6d30f2f1-b403-46f6-904e-452255a50154" />
+
 https://perish-net-demo-dashboard--sagarrohan07.replit.app
 
 ### **Scan Once. Monitor Continuously. Prevent Waste.**
