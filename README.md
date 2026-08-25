@@ -2,6 +2,8 @@
 https://perish-net-demo-dashboard--sagarrohan07.replit.app
 
 ### **Scan Once. Monitor Continuously. Prevent Waste.**
+<img width="704" height="96" alt="image" src="https://github.com/user-attachments/assets/cbaed12c-ef8e-4d55-bda9-b0746f0b95ed" />
+
 
 > **AI-powered predictive shelf-life and post-harvest loss prevention system for perishable fruits and vegetables.**
 
