@@ -1,5 +1,5 @@
 # 🍃 PerishNet
-https://perish-net-demo-dashboard--sagarrohan07.replit.app/
+https://perish-net-demo-dashboard--sagarrohan07.replit.app
 
 ### **Scan Once. Monitor Continuously. Prevent Waste.**
 
